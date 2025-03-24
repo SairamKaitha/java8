@@ -28,7 +28,7 @@ public class StreamCollectors {
 		System.out.println(empsBasedOnSal);
 	  
 		// partioning the data
-		// split the list based on sal>120000 but need count
+		// split the list based on sal>150000 but need count
 		Map<Boolean, Long> countOfEmpBySal = employees.stream()
 		                                              .collect(Collectors.partitioningBy(e->e.getSalary()>150000, Collectors.counting()));
 		System.out.println(countOfEmpBySal);
